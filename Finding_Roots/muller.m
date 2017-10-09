@@ -1,5 +1,5 @@
 function y = muller(f, x0,x1,x2, tv = 1, es = .001, imax = 100)
-  ea = 1;
+  ea = inf;
   iter = 1;
 
   do
