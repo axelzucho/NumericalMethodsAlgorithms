@@ -23,7 +23,7 @@ function falsePosition =falsePosition(f, xl, xu, tv = 1, es = .001, imax = 100)
     else
       ea = 0;
     end
-    printf("Iterations: %d, Root: %f, Ea: %f, Et: %f\n",iter,xr,ea,et);
+printf("Iterations: %d, Xl: %f, Xu: %f, Root: %f, Ea: %f, Et: %f\n",iter,xl,xu,xr,ea,et);
   until(ea < es || iter >= imax)
   bisection = xr;
 end
