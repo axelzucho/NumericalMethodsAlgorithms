@@ -1,4 +1,4 @@
-function y=lu(matrix)
+function [l,u]=lu(matrix)
 	nRows=size(matrix,1)
 	nColumns=size(matrix,2)
 
