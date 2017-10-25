@@ -1,7 +1,5 @@
-function x = gaussSeidel(matrix, lambda, es)
+function x = gaussSeidel(matrix, lambda, es) % Diagonally dominant matrix requirement
 
-%a = repmat(matrix,rows(matrix),columns(matrix)-1);
-%a = repmat(matrix, size(matrix,1), size(matrix,2)-1);
 a = matrix(:,1:columns(matrix)-1);
 x = zeros(rows(a),1);
 b = matrix(:,columns(matrix));
