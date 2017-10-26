@@ -47,20 +47,6 @@ function [l,u]=lu(matrix)
 		j=1;
 	end
 
-	
-	u
-	l
-	i=1;
-	while i<=nRows
-		d=zeros(nRows,1)
-		d(i)=1;
-
-		d=inv(l)*d;
-		x=inv(u)*d;
-		i++;
-		inversa=[inversa x];
-	end
-	inversa*matrix
 
 end
 
