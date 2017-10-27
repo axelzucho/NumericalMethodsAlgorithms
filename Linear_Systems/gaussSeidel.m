@@ -3,22 +3,25 @@ function x = gaussSeidel(matrix, lambda, es) % Diagonally dominant matrix requir
 a = matrix(:,1:columns(matrix)-1);
 x = zeros(rows(a),1);
 b = matrix(:,columns(matrix));
+
 for row = 1:rows(a)
+    old = x(row);
     sum = b(row);
     for col = 1:columns(a)
         if(row != col)
             sum = sum-a(row,col)*x(col);
         endif
     endfor
-    x(row) = sum/a(row,row);
+    sum = sum/a(row,row);
+    x(row) = lambda*sum + (1-lambda)*old;
 endfor
-iter = 1;
-precise = false;
+iter = 1
+x
 do
     %sentinel = 1;
+    iter = iter+1
+    precise = 0;
     for row = 1:rows(a)
-        iter
-        x
         old = x(row);
         sum = b(row);
         for col = 1:columns(a)
@@ -29,13 +32,13 @@ do
         sum = sum/a(row,row);
         x(row) = lambda*sum + (1-lambda)*old;
         %if(sentinel == 1 && x(row != 0)
-        ea = abs((x(row)-old)/x(row))*100;
+        ea = abs((x(row)-old)/x(row))*100
         if(ea<es)
                 %sentinel = 0;
-             precise = true;
+             precise = precise + 1;
         endif
     endfor
-    iter = iter+1;
-until(precise)
+    x
+until(precise == rows(a))
 
 %until(sentinel == 1);
