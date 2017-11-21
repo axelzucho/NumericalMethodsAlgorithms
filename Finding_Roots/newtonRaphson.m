@@ -3,7 +3,7 @@ function y = newtonRaphson(f, df, x, tv = 1, es = .001, imax = 100)
   ea = inf;
   iter = 1;
   do
-    xi=x-(f(x)/df(x));
+    xi = x - f(x)/df(x);
     if(xi != 0 && iter > 1)
       ea = abs(((xi-x)/xi)*100);
     end

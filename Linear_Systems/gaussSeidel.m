@@ -39,6 +39,6 @@ do
         endif
     endfor
     x
-until(precise == rows(a))
+until(precise == rows(a) || iter == 10)
 
 %until(sentinel == 1);

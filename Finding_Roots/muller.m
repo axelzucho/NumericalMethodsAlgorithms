@@ -34,5 +34,4 @@ printf("Iteration: %d, X0: %f, X1: %f, X2: %f, X3 (root): %f, a: %f, b: %f, c: %
     iter++;
 
   until(ea < es || iter >= imax)
-
 end

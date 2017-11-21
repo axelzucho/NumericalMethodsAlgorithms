@@ -25,5 +25,5 @@ function falsePosition =falsePosition(f, xl, xu, tv = 1, es = .001, imax = 100)
     end
 printf("Iterations: %d, Xl: %f, Xu: %f, Root: %f, Ea: %f, Et: %f\n",iter,xl,xu,xr,ea,et);
   until(ea < es || iter >= imax)
-  bisection = xr;
+  falsePosition = xr;
 end

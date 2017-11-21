@@ -17,5 +17,4 @@ function y = secante(f, x0, xi, tv = 1, es = .001, imax = 100)
 
     iter++;
   until(ea < es || iter >= imax)
-
 end
